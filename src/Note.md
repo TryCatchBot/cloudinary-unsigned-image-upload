@@ -1,0 +1,1 @@
+go to  cloudinary => setting => upload => upload presets(scroll down to see it) => Add Upload Preset => save => copy the name
