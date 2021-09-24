@@ -2,8 +2,42 @@ import React, { useState } from "react";
 import Axios from "axios";
 import "./App.css";
 import { Image } from "cloudinary-react";
+// import {AdvancedImage} from '@cloudinary/react';
+import {Cloudinary} from "@cloudinary/url-gen";
+import {CloudinaryImage} from "@cloudinary/url-gen/assets/CloudinaryImage";
+import URLConfig from "@cloudinary/url-gen/config/URLConfig";
+import CloudConfig from "@cloudinary/url-gen/config/CloudConfig";
 
 function App() {
+
+
+  // Create a Cloudinary instance and set your cloud name.
+  // const cld = new Cloudinary({
+  //   cloud: {
+  //     cloudName: 'projectnairon'
+  //   }
+  // });
+
+  // cld.image returns a CloudinaryImage with the configuration set.
+  // const myImage = cld.image('sample');
+
+  // The URL of the image is: https://res.cloudinary.com/demo/image/upload/sample
+
+
+
+
+  // Set the Cloud configuration and URL configuration
+  // let cloudConfig = new CloudConfig({cloudName: 'projectnairon'});
+  // let urlConfig = new URLConfig({secure: true});
+
+  // // Instantiate and configure a CloudinaryImage object.
+  // let myImage = new CloudinaryImage('sample', cloudConfig, urlConfig);
+
+  // // The URL of the image is: https://res.cloudinary.com/demo/image/upload/sample
+
+
+
+
   const [imageSelected, setImageSelected] = useState("");
 
   const uploadImage = () => {
@@ -18,6 +52,10 @@ function App() {
       console.log(response);
     });
   };
+
+  // const data = data.secure_url
+  const el = document.querySelector('#data');
+
 
   return (
     // <div className="App">
